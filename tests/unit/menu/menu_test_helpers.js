@@ -24,7 +24,9 @@ TestHelpers.menu = {
 
 	click: function( menu, item ) {
 		lastItem = item;
-		menu.children( ":eq(" + item + ")" ).trigger( "click" );
+		menu.children( ":eq(" + item + ")" )
+			.find( ".ui-menu-item-wrapper" )
+			.trigger( "click" );
 	}
 };
 
